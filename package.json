@@ -1,0 +1,19 @@
+{
+  "name": "tec-test-api",
+  "version": "1.0.0",
+  "description": "Teste tecnico trybe",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "debug": "nodemon index.js"
+  },
+  "author": "GabrielGM",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-rescue": "^1.1.31",
+    "jsonwebtoken": "^8.5.1",
+    "mysql2": "^2.2.5",
+    "sequelize": "^6.6.5"
+  }
+}
