@@ -1,12 +1,14 @@
 const express = require('express');
 const app = express();
 const PORT = process.env.PORT || 3000;
+const developerRoute = require('./routes/developer');
+const errorMiddleware = require('./middlewares/errorMiddleware');
 
 app.use(express.json());
 
-app.get('/', (req, res) => {
-  return res.status(200).send('it works');
-});
+app.use('/developer', developerRoute);
+
+app.use(errorMiddleware);
 
 app.listen(PORT, () => {
   console.log(`server is listening on port ${PORT}`);
