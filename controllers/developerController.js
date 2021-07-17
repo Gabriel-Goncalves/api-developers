@@ -17,6 +17,14 @@ const getAllDevelopers = rescue(async (req, res) => {
   }
 });
 
+const insertNewDeveloper = rescue(async (req, res, next) => {
+  const developerInfo = req.body;
+  const result = await developerService.insertNewDeveloper(developerInfo);
+  if (result.err) return next(result);
+  return res.status(statusCode.createdStatus).json(result);
+});
+
 module.exports = {
   getAllDevelopers,
+  insertNewDeveloper,
 };

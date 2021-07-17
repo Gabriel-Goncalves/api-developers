@@ -5,9 +5,7 @@ const router = express.Router();
 
 router.get('/', developerController.getAllDevelopers);
 
-router.post('/', (req, res) => {
-  res.status(statusCode.okStatus).json({message: 'Post Router'});
-});
+router.post('/', developerController.insertNewDeveloper);
 
 router.put('/', (req, res) => {
   res.status(statusCode.okStatus).json({message: 'Put Router'});
