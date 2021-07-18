@@ -130,6 +130,54 @@ app.use(express.json());
  *          description: Delete Success
  *      '500':
  *          description: Internal server error
+ * 
+ * @swagger
+ * /developer/fullname/:fullname:
+ *  get:
+ *    description: Find a developer by full name
+ *    responses:
+ *      '200':
+ *          description: Find Success
+ *      '500':
+ *          description: Internal server error
+ *      '404':
+ *          description: Developer Not found
+ * 
+ * @swagger
+ * /developer/cellphone/:cellphone:
+ *  get:
+ *    description: Find a developer by cellphone
+ *    responses:
+ *      '200':
+ *          description: Find Success
+ *      '500':
+ *          description: Internal server error
+ *      '404':
+ *          description: Developer Not found
+ * 
+ * @swagger
+ * /developer/cep/:cep:
+ *  get:
+ *    description: Find a developer by cep
+ *    responses:
+ *      '200':
+ *          description: Find Success
+ *      '500':
+ *          description: Internal server error
+ *      '404':
+ *          description: Developer Not found
+ * 
+ * @swagger
+ * /developer/speciality/:speciality:
+ *  get:
+ *    description: Find a developer by speciality
+ *    responses:
+ *      '200':
+ *          description: Find Success
+ *      '500':
+ *          description: Internal server error
+ *      '404':
+ *          description: Developer Not found
  */
 
 app.use('/developer', developerRoute);
