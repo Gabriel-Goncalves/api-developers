@@ -5,15 +5,19 @@ const router = express.Router();
 
 router.get('/', developerController.getAllDevelopers);
 
+router.get('/fullname/:fullname', developerController.getDeveloperByFullName);
+
+router.get('/cellphone/:cellphone', developerController.getDeveloperByCellphone);
+
+router.get('/cep/:cep', developerController.getDeveloperByCep);
+
+router.get('/speciality/:speciality', developerController.getDeveloperBySpeciality);
+
 router.post('/', developerController.insertNewDeveloper);
 
-router.put('/', (req, res) => {
-  res.status(statusCode.okStatus).json({message: 'Put Router'});
-});
+router.put('/:id', developerController.updateDeveloperById);
 
-router.delete('/', (req, res) => {
-  res.status(statusCode.okStatus).json({message: 'Delete Router'});
-});
+router.delete('/:id', developerController.deleteDeveloperById);
 
 
 module.exports = router;
