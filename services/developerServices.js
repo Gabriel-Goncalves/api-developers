@@ -57,7 +57,7 @@ const insertNewDeveloper = async developerInfo => {
     const { fullName, cellphone, phone, specialties, cep } = developerInfo;
 
     await schema
-      .validate({ fullName, cellphone, phone, specialties, cep })
+      .validate({ fullName, cellphone, phone, specialties: specialties.split(','), cep })
       .then(valid => valid);
 
     const address = await getCompleteAddress(cep);
@@ -69,13 +69,11 @@ const insertNewDeveloper = async developerInfo => {
       uf: state,
     } = address;
 
-    const specialtiesInString = specialties.join(', ');
-
     const result = await Developer.create({
       fullName,
       cellphone,
       phone,
-      specialties: specialtiesInString,
+      specialties,
       cep,
       street,
       neighborhood,

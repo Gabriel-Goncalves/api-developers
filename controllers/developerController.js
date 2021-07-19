@@ -2,7 +2,7 @@ const rescue = require('express-rescue');
 const statusCode = require('../statusCode');
 const developerService = require('../services/developerServices');
 
-const getAllDevelopers = rescue(async (req, res) => {
+const getAllDevelopers = rescue(async (req, res, next) => {
   try {
     const developers = await developerService.getAllDevelopers();
     if (developers.err) return next(developers);
