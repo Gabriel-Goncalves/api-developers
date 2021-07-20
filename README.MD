@@ -12,6 +12,24 @@
 
 ---
 
+### Orientação para executar
+
+É necessário criar um arquivo .env com as variáveis de ambiente:
+
+  - MYSQL_USER -> com o nome do usuário para acessar o banco
+
+  - PASSWORD -> com a senha para ter acesso com o usuário (__*MYSQL_USER*__)
+
+Exemplo:
+  MYSQL_USER=root
+  PASSWORD=root123
+
+### Endpoint para documentação
+
+/api-docs
+
+---
+
 ## Itens obrigatórios:
 - O sistema deve suportar as seguintes operações: Insert, Update, Select e Delete.
 
