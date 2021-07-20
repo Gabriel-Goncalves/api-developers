@@ -25,6 +25,7 @@ const getCompleteAddress = async cep => {
   }
 };
 
+// Extend: Yup documentation
 let schema = yup.object().shape({
   fullName: yup.string().required().max(120),
   phone: yup.string().nullable(),
@@ -213,7 +214,7 @@ const getDeveloperBySpeciality = async speciality => {
     const developers = await Developer.findAll({
       where: {
         specialties: {
-          [Op.like]: `%${speciality}%`,
+          [Op.like]: `%${speciality}%`,  // Extends: Sequelize documentation
         },
       },
     });

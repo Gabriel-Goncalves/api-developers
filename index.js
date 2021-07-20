@@ -197,6 +197,7 @@ app.use(express.json());
  * @swagger
  * /developer/{id}:
  *  put:
+ *    summary: Update a developer by id
  *    description: Insert a developer
  *    parameters:
  *      - name: id
@@ -246,6 +247,7 @@ app.use(express.json());
  * @swagger
  * /developer/{id}:
  *  delete:
+ *    summary: Delete a developer by id
  *    description: Exclude a developer
  *    parameters:
  *      - name: id
@@ -267,6 +269,7 @@ app.use(express.json());
  * /developer/fullname/{fullname}:
  *  get:
  *    description: Find a developer by full name
+ *    summary: Find a developer by full name
  *    parameters:
  *      - name: fullname
  *        in: path
@@ -286,7 +289,8 @@ app.use(express.json());
  * @swagger
  * /developer/cellphone/{cellphone}:
  *  get:
- *    description: Find a developer by cellphone
+ *    description: Find developer by cellphone
+ *    summary: Find developer by cellphone
  *    parameters:
  *      - name: cellphone
  *        in: path
@@ -307,6 +311,7 @@ app.use(express.json());
  * /developer/cep/{cep}:
  *  get:
  *    description: Find a developer by cep
+ *    summary: Find a developer by cep
  *    parameters:
  *      - name: cep
  *        in: path
@@ -327,6 +332,7 @@ app.use(express.json());
  * /developer/speciality/{speciality}:
  *  get:
  *    description: Find a developer by speciality
+ *    summary: Find a developer by speciality
  *    parameters:
  *      - name: speciality
  *        in: path
